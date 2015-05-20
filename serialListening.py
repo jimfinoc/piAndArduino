@@ -27,6 +27,6 @@ print datetime.datetime.now(GMT).strftime('%m/%d/%Y %H:%M:%S %Z')
 print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
 
 
-ser = serial.Serial('/dev/tty.usbserial', 9600)
+ser = serial.Serial('/dev/ttyACM0', 9600)
 while True:
     print ser.readline()
