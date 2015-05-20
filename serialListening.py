@@ -1,6 +1,7 @@
 import smbus
 import time
 import serial
+import datetime
 
 print "Press CTRL+Z to exit"
 
