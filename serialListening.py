@@ -2,6 +2,7 @@ import smbus
 import time
 import serial
 import datetime
+import json
 
 print "Press CTRL+Z to exit"
 
@@ -29,5 +30,6 @@ print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 while True:
-    print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z'), 
-    print ser.readline()
+    print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z'),
+    print json.loads(ser.readline())
+
