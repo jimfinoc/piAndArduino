@@ -29,5 +29,5 @@ print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
 
 ser = serial.Serial('/dev/ttyACM0', 9600)
 while True:
-    print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
+    print datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z'), 
     print ser.readline()
