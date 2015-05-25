@@ -3,6 +3,8 @@ import time
 import serial
 import datetime
 import json
+import commands
+
 
 print "Press CTRL+Z to exit"
 
