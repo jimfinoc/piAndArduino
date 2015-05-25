@@ -45,7 +45,7 @@ while True:
 #    readData['HTU21D-F Humidity']
     try:
         with open('/var/www/index.html', 'w') as f:
-            x = {"Local ip": localip, 'Local Time' : currentTime , 'Temperature' :     readData['HTU21D-F Temperature'] , "Brightness" :     readData['TSL2561 Luminosity'], "Location": "Indoor Green House"}
+            x = {"Local ip": localip, 'Local Time' : currentTime , 'Temperature' :     readData['HTU21D-F Temperature'] , "Humidity" : readData['HTU21D-F Humidity'] , "Brightness" :     readData['TSL2561 Luminosity'], "Location": "Indoor Green House"}
             json.dump(x,f)
             print x
         f.closed
