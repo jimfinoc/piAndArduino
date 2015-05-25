@@ -38,7 +38,10 @@ while True:
     except:
         localip = "No ip addr"
     currentTime = datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
-    readData = json.loads(ser.readline())
+    try:
+        readData = json.loads(ser.readline())
+    except:
+        readData = "error with json from serial"
     print currentTime,
     print json.dumps(readData)
     print ""
