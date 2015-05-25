@@ -45,7 +45,6 @@ while True:
 #    readData['HTU21D-F Humidity']
     try:
         with open('/var/www/index.html', 'w') as f:
-            tempInF = str(c_to_f(sensor2Data))
             x = {"Local ip": localip, 'Local Time' : currentTime , 'Temperature' :     readData['HTU21D-F Temperature'] , "Brightness" :     readData['TSL2561 Luminosity'], "Location": "Indoor Green House"}
             json.dump(x,f)
             print x
