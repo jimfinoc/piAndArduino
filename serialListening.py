@@ -34,7 +34,7 @@ ser = serial.Serial('/dev/ttyACM0', 9600)
 while True:
     try:
         #        localip = socket.gethostbyname(socket.gethostname())
-        localip = commands.getoutput("/sbin/ifconfig").split("\n")[9].split()[1][5:]
+        localip = commands.getoutput("/sbin/ifconfig").split("\n")[16].split()[1][5:]
     except:
         localip = "No ip addr"
     currentTime = datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
