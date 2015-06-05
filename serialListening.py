@@ -37,7 +37,7 @@ while True:
         localip = commands.getoutput("/sbin/ifconfig").split("\n")[16].split()[1][5:]
     except:
         localip = "No ip addr"
-    currentTime = datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S %Z')
+    currentTime = datetime.datetime.now(EST).strftime('%m/%d/%Y %H:%M:%S')
     try:
         readData = json.loads(ser.readline())
     except:
